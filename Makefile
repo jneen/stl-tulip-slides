@@ -1,11 +1,9 @@
-SIZE ?= 16x9
+SIZE ?= 4x3
 NOTES ?= notes.txt
 SLIDES ?= $(SIZE)/*/*
-VIM ?= nvim
-GVIM ?= gvim
+SLIDES_VIM ?= vim
 VIM_OPTS = -S ./vim/init.vim
-VIM_E = SLIDES_DIR=$(SIZE) $(VIM) $(VIM_OPTS)
-GVIM_E = $(GVIM) $(VIM_OPTS)
+VIM_E = SLIDES_DIR=$(SIZE) $(SLIDES_VIM) $(VIM_OPTS)
 
 .PHONY: edit
 edit:
