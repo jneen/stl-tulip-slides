@@ -1,0 +1,18 @@
+iterate next init =
+  ~(.cons init (next init > iterate next))
+
+nats = iterate (add 1) 0
+
+to-next-prime seen rest =
+  stream
+  > drop-while [ n => seen
+                   > take-while [ mul $ $ > lte n ]
+                   > any (divides n) ]
+
+select-primes seen rest = ~{
+  (.cons h t) = to-next-prime seen rest
+  .cons h (select-primes t (seen > append h))
+}
+
+primes = select-primes (drop 2 nats) \vec[]
+

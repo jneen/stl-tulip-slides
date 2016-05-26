@@ -1,0 +1,18 @@
+
+                      OBJECTS
+
+ @object Point x y [
+   magnitude = \vec(x y) > map square > sum > sqrt
+
+   move dx dy = Point (add x dx) (add y dy)
+ ]
+
+ origin = Point 0 0
+
+ origin/magnitude # => 0
+ Point/magnitude 3 4 # => 5
+
+
+
+
+

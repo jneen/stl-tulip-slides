@@ -1,0 +1,18 @@
+
+                    CONCURRENCY
+
+   * (mostly) lifted from erlang
+
+   pid = spawn { ! => ... }
+
+   send pid message
+
+   receive [ pattern => ...; pattern => ... ]
+
+   receive [ ... ] -timeout: (seconds, handler)
+
+   monitor pid [ .crash reason => ... ]
+
+   spawn pid -monitor: [ .crash reason => ... ]
+
+

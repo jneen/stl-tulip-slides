@@ -1,0 +1,18 @@
+
+                     LAZY EVAL
+
+
+
+         thunk = ~{ print 'in-thunk ; .ok }
+
+         # no side effect
+
+         thunk > [ .ok => print 'ok ]
+
+         # prints in-thunk, then ok
+
+
+
+
+
+

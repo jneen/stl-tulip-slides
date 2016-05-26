@@ -1,0 +1,18 @@
+
+                     KILL NIL
+
+              what is nil used for?
+
+       . empty list
+       . successful side-effect
+       . non-crashing error
+       . empty optional value
+      => uninitialized record field
+
+
+
+
+
+
+
+

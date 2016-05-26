@@ -1,0 +1,130 @@
+Tulip: A Well-Balanced Language
+
+TOC:
+* Slow Software
+* The Design of Tulip
+* The community
+
+* Slow Software
+  - "Move Slow and Fix Things" --@fatneckbeardguy (?)
+  - get it right the First Time (and avoid having to do it over again)
+  - research prior art
+  - decisions that you're stuck with vs decisions that are easy to scrap
+  - particularly suited for lang design bc once user code is out there, ~you're stuck with everything~
+
+* Core language
+  - Goals:
+    . Make me happy, make users happy
+    . Repl ergonomics, for easy dev and also embedding
+    . Good tools for building large, complex programs
+    . Community first. BE FEMME.
+  - The labels
+    . un-typechecked
+    . mostly impure (mutation discouraged)
+      - innovation of erlang / popularized by clojure - discourage mutability, but make it possible with impure functions, ets, etc
+    . garbage-collected
+    . concurrent
+    . not a lisp, but with strong macros
+    . no nil <--- wait what
+  - Basic syntax
+    . dash-case names, slash for namespacing
+    . all keyboard symbols reserved
+    . ML-style application
+    . auto-curry
+    . chain
+    . lambda
+    . autolam
+    . macros
+  - Kill nil (null, None, NULL, undefined, ...)
+    . "I am employed as a null wrangler" --@queertypes
+    . no nil
+    . fixes a long-standing problem in clojure
+    . in tulip, we solve this problem with the power of *variants*.
+
+  - Tagwords
+    . "tagwords"
+      + .some x / .none
+      + .cons head tail / .nil
+    . pattern-matching
+    . "no nil"
+    . erlang already does this!
+    . but...
+
+        [erlang-questions] What atom name to represent a null value
+
+        > On Thu, Feb 25, 2010 at 9:29 PM, Jayson Vantuyl <...> wrote:
+        >
+        >> undefined is the standard one.  Although I've used none, null, and nil
+        >> before (in different situations).
+        >>
+
+    . this is actually good! well... if we have some conventions
+      + .nil           : empty list (pair with `.cons head tail`)
+      + .ok            : success, nothing to return (pair with crash or `.error`)
+      + .error message : non-crashing error
+      + .none          : empty optional value (pair with `.some value`)
+      + uninitialized record fields - use options or variants instead!
+
+    . This space is too big for one "nil"!
+
+    . side-eye at elixir
+
+      > Finally, note cond considers any value besides nil and false to be true
+
+        I was wondering why Elixir chose to go with nil instead of keeping Erlang's undefined atom as the default no-value atom.
+        [...] As a result we see things like defining "nillify" functions mapping undefined to nil (and "undefine" functions mapping nil back to undefined)
+
+      Jose Valim
+      > I would have chosen undefined instead of nil if it was actually a recurrent pattern in Erlang APIs but the truth is that it is isn't.
+
+      [...]
+
+      > Someone already asked me why not make the `||` operator work on tuples like `{ :error, _ }` so we can easily wrap Erlang code without nil.
+        It is basically the same idea of using something else Erlang already returns instead of nil.
+
+      > That said, I believe the undefined cases to be few so I chose to go with a terminology which is shorter and more known by developers (nil or null) instead of undefined.
+
+      (.>_<)7 -why would you do this
+
+* Abstraction tools
+  - @module, (stateless) @object
+    . "lookup" with `/`, namespaced identifiers
+    . initial effects on module mount (cf code server)
+
+    . objects - modules with closure
+    . initial effects on initialization (completing the closure)
+    . +static annotation
+    . why objects? they allow late binding
+
+  - Open methods ("multimethods")
+    . specificity
+
+  - Macros, Skeleton trees
+    . the power of lisp
+    . as homoiconic as is useful to be
+
+* Runtime capabilities
+  - Concurrency
+    . lifted wholesale from erlang - spawn, send, receive, monitors
+    . plans for easy distribution of processes
+
+  - Code server, code loading, runtime compilation
+    . also lifted wholesale from erlang
+    . "compile" vs "mount"
+
+
+            $code  <------------------\
+            /                          \
+          @use                         |
+          /                            |
+        compile --> module object --> mount
+
+    . safe, downtime-free code reloading
+
+* Community
+
+  - snek
+  - woman-centered, queer-normative
+  - trying hard re racial diversity, need to learn more and do better here
+  - anti-splainey
+  - safe-ish

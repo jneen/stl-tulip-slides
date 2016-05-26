@@ -1,0 +1,18 @@
+
+                      MACROS
+
+
+    \my-macro[arbitrary (syntax) { things }]
+
+   \list[
+     (.item
+       (.tok (.name 'arbitrary))
+       (.nested .lparen
+                .rparen
+                \list[(.tok (.name 'syntax))]
+       (.nested .lbrace
+                .rbrace
+                \list[
+                  (.item (.tok
+                           (.name 'things)))]))]
+

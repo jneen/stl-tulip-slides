@@ -1,0 +1,18 @@
+
+
+                    THE BASICS
+
+
+               "traditional string\n"
+                  'simple-string
+
+                  tuple = x, y
+            tuple > [ x, y => ... ]
+
+                  \r{regex(en)*}
+                   \vec(1 2 3)
+                \map(-a: 1 -b: 2)
+
+
+
+

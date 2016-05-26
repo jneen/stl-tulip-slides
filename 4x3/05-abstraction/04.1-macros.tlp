@@ -1,0 +1,18 @@
+
+                      MACROS
+
+
+      @my-definition-macro Thing [
+        ...
+      ]
+
+      +my-annotation-macro arg arg
+      thing = ...
+
+      \r{regexen\s+are\s+cool{0,4}}
+
+      \str{interpolated $(strings!)}
+
+
+
+

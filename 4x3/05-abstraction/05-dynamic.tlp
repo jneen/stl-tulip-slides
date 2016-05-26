@@ -1,0 +1,18 @@
+
+                   ENVIRONMENTS
+
+
+            $thing = 0
+            print-thing! = print $thing
+            { $thing = 1; print-thing! }
+            print-thing!
+
+            # => prints 1, then 0
+
+
+
+
+
+
+
+

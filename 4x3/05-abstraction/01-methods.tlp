@@ -1,0 +1,18 @@
+
+                      METHODS
+
+ @method map _ %
+
+ @impl map f .nil = .nil
+ @impl map f (list:.cons _ _) = map-list f list
+
+ @impl map f .none = .none
+ @impl map f (.some x) = .some (f x)
+
+ @impl map f (.my-cool-thing x) = ...
+
+
+
+
+
+
