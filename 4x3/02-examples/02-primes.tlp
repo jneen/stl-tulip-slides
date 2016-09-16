@@ -4,7 +4,7 @@ iterate next init =
 nats = iterate (add 1) 0
 
 to-next-prime seen rest =
-  stream
+  rest
   > drop-while [ n => seen
                    > take-while [ mul $ $ > lte n ]
                    > any (divides n) ]

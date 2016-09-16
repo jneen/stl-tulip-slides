@@ -6,13 +6,13 @@
        . empty list                 .nil
        . successful side-effect     .ok
        . non-crashing error         .error reason
-       . empty optional value       .none
-       . uninitialized record field .undef
-                                    (pls refactor)
+       . empty optional value       # (`u_u)'
+       . uninitialized record field # (.e_e)?
+
 
 
   (.-o-)/ this space is too big for one nil!
 
-  (.e_e). - side-eye at elixir
+
 
 

@@ -1,18 +1,18 @@
 
-                      OBJECTS
+               PARAMETERIZED MODULES
 
- @object Point x y [
+ @module Point x y [
    magnitude = \vec(x y) > map square > sum > sqrt
 
    move dx dy = Point (add x dx) (add y dy)
  ]
 
- origin = Point 0 0
+ point = Point 3 4
 
- origin/magnitude # => 0
+ point/magnitude # => 5
  Point/magnitude 3 4 # => 5
-
-
+ point/move 2 3 # => (Point 5 7)
+ Point/move 3 4 2 3 # => (Point 5 7)
 
 
 

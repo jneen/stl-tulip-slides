@@ -2,17 +2,17 @@
 
         ('n_n)' THE AGENDA `(n_n`)
 
-       + Pretty Pictures
+       @jneen: Design Tour
+       |  + Pretty Pictures
+       |
+      ----> A Tour Part I: Core Language <----
+       |
+       |  . A Digression About Nil
+       |
+       |  . A Tour Part II: Abstraction Tools
+       \
 
-      -> A Tour Part I: Core Language
-
-       . A Digression About Nil
-
-       . A Tour Part II: Abstraction Tools
-
-       . A Tour Part III: Runtime
-                  (,-_-)> (if there's time)
-
-
-
+       @sigfig: Implementation Tour
+       |  ... (>n_n)>_/
+       \
 

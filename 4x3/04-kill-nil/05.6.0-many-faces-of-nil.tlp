@@ -7,11 +7,11 @@
        . successful side-effect     # (.o_o)7
        . non-crashing error         # ("x_x).
        . empty optional value       # (`u_u)'
-      => uninitialized record field # (.e_e)?
+       . uninitialized record field # (.e_e)?
 
 
 
-
+  (.-o-)/ this space is too big for one nil!
 
 
 

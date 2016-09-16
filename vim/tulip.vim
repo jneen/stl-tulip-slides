@@ -1,7 +1,7 @@
 " Vim syntax file
-" Language:     JavaScript
+" Language:     Tulip
 " Maintainer:   Jeanine Adkisson
-" URL:          TODO
+" URL:          http://tuliplang.org/
 
 let ident = "[a-zA-Z_-][\/a-zA-Z0-9_-]*"
 
@@ -22,6 +22,7 @@ exe "syn match tlName /" . ident . "/"
 exe "syn match tlDotted /[.]" . ident . "/"
 exe "syn match tlCheck /[\\%]" . ident . "/"
 exe "syn match tlKeyword /[@]" . ident . "/"
+exe "syn match tlDollar /[\\$]/"
 exe "syn match tlDynamic /[\\$]" . ident . "/"
 exe "syn match tlMacro /\\(\\\\" . ident . "\\)/"
 exe "syn match tlFlag /-" . ident . "/"
@@ -56,5 +57,6 @@ hi! def link tlStringContents String
 hi! def link tlAnnot       Function
 hi! def link tlLet         Punctuation
 hi! def link tlDynamic     Identifier
+hi! def link tlDollar      Identifier
 hi! def link tlComment     Comment
 hi! def link tlNumber      Number

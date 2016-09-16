@@ -1,14 +1,14 @@
 
                      KILL NIL
 
-              what is nil used for?
+              many faces of nothing
 
        . empty list                 .nil
        . successful side-effect     .ok
        . non-crashing error         .error reason
        . empty optional value       .none
-       . uninitialized record field .undef
-                                    (or refactor)
+       . uninitialized record field # (.e_e)?
+
 
 
   (.-o-)/ this space is too big for one nil!

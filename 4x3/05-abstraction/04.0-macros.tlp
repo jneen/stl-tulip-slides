@@ -7,12 +7,12 @@
    \list[
      (.item
        (.tok (.name 'arbitrary))
-       (.nested .lparen
-                .rparen
-                \list[(.tok (.name 'syntax))]
-       (.nested .lbrace
-                .rbrace
-                \list[
-                  (.item (.tok
-                           (.name 'things)))]))]
+       (.nested 'LPAREN
+                'RPAREN
+                \list[.tok 'NAME 'syntax])
+       (.nested 'LBRACE
+                'RBRACE
+                \list[.item (.tok 'NAME 'things)]))]
+
+
 

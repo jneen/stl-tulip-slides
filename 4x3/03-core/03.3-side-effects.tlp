@@ -8,9 +8,9 @@
 
            start-sprinklers! = { ... }
 
+               start-sprinklers # no call
+
                start-sprinklers!
-
-
 
 
 
