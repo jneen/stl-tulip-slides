@@ -1,18 +1,18 @@
 
   (.strangeloop 2016 "St. Louis, MO")
 
-
-
-
            "Tulip: A Language For Humans"
 
               "http://tuliplang.org/"
 
 
+            (Presenter
+              -name: "Sig Cox"
+              -twitter: "@sigfig")
 
-                   ( Presenter
-                     -name: "Jeanine Adkisson"
-                     -twitter: "@jneen_"
-                     -github: "@jneen"
-                     -blog: "http://jneen.net/" )
+            (Presenter
+              -name: "Jeanine Adkisson"
+              -twitter: "@jneen_"
+              -blog: "http://jneen.net/")
+
 

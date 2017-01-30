@@ -7,11 +7,11 @@
    move dx dy = Point (add x dx) (add y dy)
  ]
 
- point = Point 3 4
+ p = Point 3 4
 
- point/magnitude # => 5
+ p/magnitude # => 5
  Point/magnitude 3 4 # => 5
- point/move 2 3 # => (Point 5 7)
+ p/move 2 3 # => (Point 5 7)
  Point/move 3 4 2 3 # => (Point 5 7)
 
 

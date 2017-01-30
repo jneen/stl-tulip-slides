@@ -4,15 +4,15 @@
 
     \my-macro[arbitrary (syntax) { things }]
 
-   \list[
-     (.item
-       (.tok (.name 'arbitrary))
-       (.nested 'LPAREN
-                'RPAREN
-                \list[.tok 'NAME 'syntax])
-       (.nested 'LBRACE
-                'RBRACE
-                \list[.item (.tok 'NAME 'things)]))]
+  \list[
+    (.item
+      (.tok (.name 'arbitrary))
+      (.nested 'LPAREN
+               'RPAREN
+               \list[.tok 'NAME 'syntax])
+      (.nested 'LBRACE
+               'RBRACE
+               \list[.item (.tok 'NAME 'things)]))]
 
 
 
